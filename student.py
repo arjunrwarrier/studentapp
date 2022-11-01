@@ -18,5 +18,5 @@ while True:
         print("updating student")
     elif(choice == 5):
         print("delete a student")
-    else:
+    elif(choice==6):
         break
