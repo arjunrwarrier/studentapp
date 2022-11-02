@@ -88,6 +88,26 @@ while True:
         result = mycursor.fetchall()
         for i in result:
             print(i)
+
+    elif(choice ==8):
+        print("Subjectwise average marks")
+        subname = input("Enter the subject name: ")
+        if (subname=='Physics'):
+            sql="SELECT AVG (`physicsmark`) FROM `marks` "
+
+        elif(subname =='Chemistry'):
+            sql="SELECT AVG (`chemistrymark`) FROM `marks` "
+
+        elif(subname =='Maths'):
+            sql="SELECT AVG (`mathsmark`) FROM `marks` "
+        
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        print(result)
+
+
+
+
     elif(choice == 9):
         print("Individual marks")
         adm = input("Enter the student admission number: ")
