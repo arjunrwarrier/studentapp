@@ -34,6 +34,11 @@ while True:
 
     elif(choice == 3):
         print("Searching a student")
+        adm = input("Enter the admission number: ")
+        sql = 'SELECT `id`, `name`, `rollnumber`, `admno`, `college` FROM `students` WHERE `admno` =  '+adm
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        print(result)
     elif (choice == 4):
         print("updating student")
     elif(choice == 5):
